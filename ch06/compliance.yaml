@@ -1,0 +1,7 @@
+---
+- get_facts:
+    os_version: 4.17
+- get_interfaces_ip:
+    GigabitEthernet1:
+      ipv4:
+        10.10.10.1
