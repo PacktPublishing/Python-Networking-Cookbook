@@ -13,10 +13,14 @@ conn_details = {
 
 device = driver(**conn_details)
 device.open()
-config = device.get_config()
 
-host = conn_details['hostname']
-for conf_type in config.keys():
-    with open(f"{host}-{conf_type}.conf.bak", "w") as f:
-        f.writelines(config[conf_type])
+to_ping = [
+    "packtpub.com",
+    "10.0.0.1"
+]
+for host in to_ping:
+    res = device.ping(host)
+    print(f"Results for {host}")
+    print(res)
+
 device.close()

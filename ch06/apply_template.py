@@ -34,11 +34,5 @@ conn_details = {
 device = driver(**conn_details)
 device.open()
 device.load_merge_candidate(config=out)
-print(device.compare_config())
-
-user_inp = input("Do you want to apply the changes?[y/n] ")
-if user_inp == "y":
-    device.commit_conifg()
-else:
-    device.discard_config()
+device.commit_conifg()
 device.close()
