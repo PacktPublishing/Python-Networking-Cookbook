@@ -1,0 +1,11 @@
+- hosts: localhost
+  tasks:
+    - name: Testing our module from ansible playbook
+      web_module:
+        access_token: 6bec40cf957de430a6f1f2baa056b99a4fac9ea0
+      register: result
+      delegate_to: localhost
+    - name: Show results
+      debug:
+        msg: "{{ item.name }}"
+      with_items: "{{ result['networks'] }}"
