@@ -1,10 +1,12 @@
 from paramiko.client import SSHClient
 
-SSH_USER = "<Insert your ssh user here>"
-SSH_HOST = "<Insert the IP/host of your device/server here>"
-SSH_PORT = 22 # Change this if your SSH port is different
-SSH_KEY = "<Insert the name of your private key here>"
-SSH_KEY_PASSWORD = "<Insert the password here>"
+# Credentials here are for a always-on Sandbox from Cisco DevNet
+SSH_USER = "<Insert user>"
+SSH_PASSWORD = "<insert password>"
+SSH_HOST = "<insert host>"
+SSH_PORT = 22
+SSH_KEY = "<insert path to ssh key here>"
+SSH_KEY_PASSWORD = "<insert ssh keyphrase here>"
 
 client = SSHClient()
 client.load_system_host_keys()
@@ -13,5 +15,5 @@ client.connect(SSH_HOST, port=SSH_PORT,
                          look_for_keys=True,
                          key_filename=SSH_KEY,
                          passphrase=SSH_KEY_PASSWORD)
-stdin, stdout, stderr = client.exec_command('<your command>')
+stdin, stdout, stderr = client.exec_command('show ip interface brief')
 client.close()

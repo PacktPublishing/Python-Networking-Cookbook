@@ -9,7 +9,7 @@ def to_ipv6(addr):
 	
 	return str(ipv6)
 
-environment.filters[“toIPv6”] = to_ipv6
+environment.filters["toIPv6"] = to_ipv6
 
 tpl = environment.get_template("filter.conf.tpl")
 

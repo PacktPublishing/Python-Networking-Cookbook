@@ -1,7 +1,7 @@
 from paramiko.client import SSHClient
 from paramiko import SSHConfig
 
-SSH_CONFIG = "<insert path to ssh config here>"
+SSH_CONFIG = "<insert path to ssh config>"
 SSH_HOST = "example"
 
 config = SSHConfig()
@@ -11,9 +11,12 @@ config.parse(config_file)
 
 dev_config = config.lookup(SSH_HOST)
 
+client = SSHClient()
 client.load_system_host_keys()
-HOST = dev_config['hostname'],
+
+HOST = dev_config['hostname']
+
 client.connect(HOST, port=int(dev_config['port']),
                      username=dev_config['user'],
-                     key_filename=dev_config['identityfile'])
+                     password=dev_config['password'])
 client.close()

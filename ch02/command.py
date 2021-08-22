@@ -1,8 +1,10 @@
+import time
 from paramiko.client import SSHClient
 
-SSH_USER = "<Insert your ssh user here>"
-SSH_PASSWORD = "<Insert your ssh password here>"
-SSH_HOST = "<Insert the IP/host of your device/server here>"
+# Credentials here are for a always-on Sandbox from Cisco DevNet
+SSH_USER = "<Insert user>"
+SSH_PASSWORD = "<insert password>"
+SSH_HOST = "<insert host>"
 SSH_PORT = 22 # Change this if your SSH port is different
 
 client = SSHClient()
@@ -16,4 +18,6 @@ client.connect(SSH_HOST, port=SSH_PORT,
 
 CMD = "show ip interface brief" # You can issue any command you want
 stdin, stdout, stderr = client.exec_command(CMD)
+time.sleep(5)
+
 client.close()

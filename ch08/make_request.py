@@ -2,11 +2,11 @@ import requests
 
 s = requests.Session()
 
-host = "ios-xe-mgmt.cisco.com"
+host = "<insert host>"
 rest_path = "restconf"
-port = 9443
-user = "developer"
-password = "C1sco12345"
+port = 443
+user = "<insert user>"
+password = "<insert password>"
 
 s = requests.Session()
 s.auth = (user, password)

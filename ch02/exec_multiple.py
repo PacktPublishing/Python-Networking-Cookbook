@@ -3,14 +3,14 @@ from paramiko.client import SSHClient
 
 credentials = {}
 with open("credentials.json") as fh:
-     json.load(fh)
+    credentials = json.load(fh)
 
-CMD = “show running-config”
+CMD = "show running-config"
 for cred in credentials:
 	out_file_name = str(cred['name']) + ".txt"
 	client = SSHClient()
 	client.load_system_host_keys()
-	client.connect(SSH_HOST, port=cred['port'],
+	client.connect(cred['host'], port=cred['port'],
                               username=cred['username'],
                               password=cred['password'])
 	stdin, stdout, stderr = client.exec_command(CMD)

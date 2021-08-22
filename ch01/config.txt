@@ -1,0 +1,5 @@
+mode=development
+host=192.168.20.1
+port=8020
+user=root
+password=password

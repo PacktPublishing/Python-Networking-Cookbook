@@ -3,12 +3,12 @@ from netmiko import ConnectHandler
 
 connection_info = {
     'device_type': 'cisco_ios',
-    'host': 'ios-xe-mgmt.cisco.com',
-    'port': 8181,
-    'username': 'developer',
-    'password': 'C1sco12345'
+    'host': '<insert host>',
+    'port': 22, # Change if your port is different
+    'username': '<insert username>',
+    'password': '<insert password>'
 }
 
 with ConnectHandler(**connection_info) as conn:
-    out = conn.send_command("show running-config", use_genie=True)
+    out = conn.send_command("show running-config")
     print(out)

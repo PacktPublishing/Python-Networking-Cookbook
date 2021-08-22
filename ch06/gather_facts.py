@@ -3,11 +3,11 @@ import napalm
 driver = napalm.get_network_driver("ios")
 
 conn_details = {
-    "hostname" : 'ios-xe-mgmt.cisco.com',
-    "username" : 'developer',
-    "password" : 'C1sco12345',
+    "hostname" : '<insert host>',
+    "username" : '<insert user>',
+    "password" : '<insert password>',
     "optional_args": {
-        "port": 8181
+        "port": 22 # change if your port is different
     }
 }
 

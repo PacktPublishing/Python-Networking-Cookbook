@@ -1,5 +1,6 @@
 from paramiko.client import SSHClient
 
+# Credentials here are for a always-on Sandbox from Cisco DevNet
 SSH_USER = "<Insert your ssh user here>"
 SSH_PASSWORD = "<Insert your ssh password here>"
 SSH_HOST = "<Insert the IP/host of your device/server here>"

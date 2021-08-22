@@ -1,10 +1,11 @@
 from paramiko.client import SSHClient
 import time
 
-SSH_USER = "<Insert your ssh user here>"
-SSH_PASSWORD = "<Insert your ssh password here>"
-SSH_HOST = "<Insert the IP/host of your device/server here>"
-SSH_PORT = 22 # Change this if your SSH port is different
+# Credentials here are for a always-on Sandbox from Cisco DevNet
+SSH_USER = "<Insert user>"
+SSH_PASSWORD = "<insert password>"
+SSH_HOST = "<insert host>"
+SSH_PORT = 22 # Change this if your SSH port is differente
 
 client = SSHClient()
 client.load_system_host_keys()
@@ -16,7 +17,7 @@ client.connect(SSH_HOST, port=SSH_PORT,
                          look_for_keys=False)
 
 channel = client.get_transport().open_session()
-shell = channel.invoke_shell()
+shell = client.invoke_shell()
 
 commands = [
 	"configure terminal",
@@ -24,7 +25,7 @@ commands = [
 ]
 
 for cmd in commands:
-	shell.send(cmd + "\n")
+      shell.send(cmd + "\n")
       out = shell.recv(1024)
       print(out)
-	time.sleep(1)
+      time.sleep(5)

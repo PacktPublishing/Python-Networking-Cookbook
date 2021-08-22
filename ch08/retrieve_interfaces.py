@@ -2,11 +2,11 @@ import requests
 from pprint import pprint
 
 protocol = "https"
-host = "ios-xe-mgmt.cisco.com"
+host = "10.10.20.48"
 rest_path = "restconf/data"
-port = 9443
-user = "developer"
-password = "C1sco12345"
+port = 443
+user = "<insert user>"
+password = "<insert password>"
 
 s = requests.Session()
 s.auth = (user, password)

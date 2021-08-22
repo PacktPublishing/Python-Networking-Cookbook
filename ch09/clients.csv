@@ -1,3 +1,0 @@
-id,mac,description,ip,ip6,ip6Local,user,firstSeen,lastSeen,manufacturer,os,recentDeviceSerial,recentDeviceName,recentDeviceMac,recentDeviceConnection,ssid,vlan,switchport,usage,status,notes,smInstalled,groupPolicy8021x,adaptivePolicyGroup
-kd140c5,0c:8d:db:b2:77:f8,m0c8ddbb277f8,192.168.128.7,,fe80:0:0:0:e8d:dbff:feb2:77f8,,2021-02-15T17:45:13Z,2021-05-12T22:11:33Z,Meraki,Meraki OS,Q2HP-W3HC-2C8D,,e0:55:3d:d2:79:0f,Wired,,1,1,"{'sent': 19669, 'recv': 6725, 'total': 26394}",Online,,False,,
-k044c2f,0c:8d:db:b0:c2:dc,,192.168.128.1,,,,2021-02-15T17:45:13Z,2021-05-12T22:11:33Z,Meraki,,Q2HP-W3HC-2C8D,,e0:55:3d:d2:79:0f,Wired,,1,2,"{'sent': 18492, 'recv': 12715, 'total': 31208}",Online,,False,,

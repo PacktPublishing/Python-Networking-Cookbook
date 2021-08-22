@@ -1,13 +1,14 @@
 devices:
-  csr1000-v1:
+  <insert hostname>:
     type: router
     os: iosxe
     credentials:
       default:
-        username: developer
+        username: <insert username>
         password: C1sco12345
     connections:
       mgmt:
         protocol: ssh
-        host: ios-xe-mgmt.cisco.com
-        port: 8181
+        ip: <insert host>
+        port: <insert port>
+        ssh_options: -o KexAlgorithms=+diffie-hellman-group-exchange-sha1 -c aes256-ctr
