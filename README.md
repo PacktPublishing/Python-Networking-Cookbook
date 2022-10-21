@@ -59,3 +59,7 @@ Click on following link to see the Code in Action:
 ## Get to Know the Author
 **Marcel Neidinger**
 started to program at the age of 10 and currently works as an API and programmability lead for the EMEAR Systems Engineering organization at Cisco Systems. Specifically, he works with customers and partners to build custom solutions using programmability and APIs. Besides having a bachelor's degree in computer science, he is also a Cisco Certified DevNet Associate as well as a Cisco Certified DevNet Specialist for enterprise network automation. You can find him on Twitter at squ4rks and on GitHub at squ4rks.
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781838646639">https://packt.link/free-ebook/9781838646639 </a> </p>
