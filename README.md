@@ -67,6 +67,9 @@ Click on following link to see the Code in Action:
 
 * Azure Networking Cookbook - Second Edition [[Packt]](https://www.packtpub.com/product/azure-networking-cookbook-second-edition/9781800563759?utm_source=github&utm_medium=repository&utm_campaign=9781800563759) [[Amazon]](https://www.amazon.com/dp/1800563752)
 
+## Errata
+* Page 40 (Step 7): **shell.send(cmd + "\n")** _should be_ **channel.send(cmd + "\n")**
+* Page 40 (Step 7): **out = shell.recv(1024)** _should be_ **out = channel.recv(1024)**
 
 ## Get to Know the Author
 **Marcel Neidinger**
